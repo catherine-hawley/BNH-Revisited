@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bear Ninja Hunter Game</title>
+    <meta name="author" content="Catherine Hawley">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        text-align: center;
+        padding: 50px;
+        min-height: 100vh;
+        margin: 0;
+      }
+      
+      h2 {
+        font-size: 3em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 100px;
+        animation: fadeIn 1s ease-in;
+      }
+      
+    
+    </style>
+  </head>
+
+<body>
+<h2>Play Bear, Ninja, Hunter!</h2>
+<br>
+<p>Play against the computer.</p>
+<br>
+<br>
+<ul>
+  <li>The Bear Beats the Hunter.</li>
+  <li><p><The Hunter Beats the Ninja.</p></li>
+  <li><p>And the Ninja Beats the Bear.</p></li>
+</ul>
+<p></p>
+<br>
+<br>
+<p>Click a button to select your choice.</p>
+<br>
+<hr>
+buttons
+<hr>
+ 
+<script>
+  //Get name from user
+ // let uname = prompt('Welcome to Bear, Hunter, Ninja. Please enter your name: ');
+
+  //display welcome message 
+  //let amessage = `Hi, ${uname}`;
+ // console.log(amessage + ' Let\'s play!');
+ // alert(amessage);    
+
+  //store game choice options in an array
+  //let choices = ["bear", "hunter", "ninja"];
+
+  //loop to allow player to play again
+  //let playAgain = true;
+  
+  //while (playAgain) {
+    //get role choice from user
+    //let userInput = prompt("Who are you? Bear, Hunter, or Ninja: ");
+    
+    //check if user hit cancel or entered invalid input
+    //if (userInput === null || userInput === "") {
+       // alert("Press F5 to play again.");
+        //continue
+    //}
+    
+    //use forced case to standardize player input (convert to lowercase)
+   // userInput = userInput.toLowerCase();
+    
+    //validate input is one of the valid choices
+   // if (userInput !== "bear" && userInput !== "hunter" && userInput !== "ninja") {
+      //  alert("Press F5 to play again.");
+      //  continue;
+   //}
+    
+    //let choiceMessage = `${uname} you picked ${userInput}`;
+
+    //display user name and role choice
+    alert(choiceMessage);
+
+    //randomize a number to use as computer choice
+    let randomIndex = Math.floor(Math.random() * 3);
+    
+    //traverse the array to extract computer choice
+    let computerChoice = choices[randomIndex];
+
+    //display computer choice
+    console.log(`The computer picked ${computerChoice}!`);
+    alert(`The computer picked ${computerChoice}!`);
+
+    //create combination string for switch
+    let combination = userInput + computerChoice;
+
+    //use switch to determine the winner
+    let winner;
+    switch (combination) {
+        case "bearbear":
+            winner = "Tie";
+            break;
+        case "ninjaninja":
+            winner = "Tie";
+            break;
+        case "hunterhunter":
+            winner = "Tie";
+            break;
+        case "bearninja":
+            winner = "User";
+            break;
+        case "ninjahunter":
+            winner = "User";
+            break;
+        case "hunterbear":
+            winner = "User";
+            break;
+        case "hunterninja":
+            winner = "Computer";
+            break;
+        case "bearhunter":
+            winner = "Computer";
+            break;
+        case "ninjabear":
+            winner = "Computer";
+            break;
+        default:
+            winner = "Error - invalid choices";
+    }
+
+    //display the result
+    alert(`Winner: ${winner}`);
+    console.log(`Winner: ${winner}`);
+    
+    //ask if player wants to play again
+    let response = prompt("Do you want to play again? (yes/no): ");
+    if (response === null || response.toLowerCase() !== "yes") {
+        playAgain = false;
+        alert(`Thanks for playing, ${uname}!`);
+        console.log(`Game ended. Thanks for playing, ${uname}!`);
+    }
+  }
+</script>
+</body>
+</html>
