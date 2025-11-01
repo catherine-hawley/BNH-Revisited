@@ -29,6 +29,7 @@
   </head>
 
 <body>
+	<!-- display game rules -->
 <h2>Play Bear, Ninja, Hunter!</h2>
 <br>
 <p>Play against the computer.</p>
@@ -45,11 +46,15 @@
 <p>Click a button to select your choice.</p>
 <br>
 <hr>
+<div class = "choices">	
 <button id="BearBtn">Bear</button>
 <button id="NinjaBtn">Ninja</button>
 <button id="HunterBtn">Hunter</button>
+</div>
 <hr>
- 
+<div class = "result">
+	<!-- result will be displayed here -->
+</div>
 <script>
 function getWinner(player, computer) {
 	if (
@@ -74,103 +79,17 @@ function getComputerChoice() {
     const randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
   }  
-  //Get name from user
- // let uname = prompt('Welcome to Bear, Hunter, Ninja. Please enter your name: ');
-
-  //display welcome message 
-  //let amessage = `Hi, ${uname}`;
- // console.log(amessage + ' Let\'s play!');
- // alert(amessage);    
-
-  //store game choice options in an array
-  //let choices = ["bear", "hunter", "ninja"];
-
-  //loop to allow player to play again
-  //let playAgain = true;
   
-  //while (playAgain) {
-    //get role choice from user
-    //let userInput = prompt("Who are you? Bear, Hunter, or Ninja: ");
-    
-    //check if user hit cancel or entered invalid input
-    //if (userInput === null || userInput === "") {
-       // alert("Press F5 to play again.");
-        //continue
-    //}
-    
-    //use forced case to standardize player input (convert to lowercase)
-   // userInput = userInput.toLowerCase();
-    
-    //validate input is one of the valid choices
-   // if (userInput !== "bear" && userInput !== "hunter" && userInput !== "ninja") {
-      //  alert("Press F5 to play again.");
-      //  continue;
-   //}
-    
-    //let choiceMessage = `${uname} you picked ${userInput}`;
-
-    //display user name and role choice
-    alert(choiceMessage);
-
-    //randomize a number to use as computer choice
-    let randomIndex = Math.floor(Math.random() * 3);
-    
-    //traverse the array to extract computer choice
-    let computerChoice = choices[randomIndex];
-
-    //display computer choice
-    console.log(`The computer picked ${computerChoice}!`);
-    alert(`The computer picked ${computerChoice}!`);
-
-    //create combination string for switch
-    let combination = userInput + computerChoice;
-
-    //use switch to determine the winner
-    let winner;
-    switch (combination) {
-        case "bearbear":
-            winner = "Tie";
-            break;
-        case "ninjaninja":
-            winner = "Tie";
-            break;
-        case "hunterhunter":
-            winner = "Tie";
-            break;
-        case "bearninja":
-            winner = "User";
-            break;
-        case "ninjahunter":
-            winner = "User";
-            break;
-        case "hunterbear":
-            winner = "User";
-            break;
-        case "hunterninja":
-            winner = "Computer";
-            break;
-        case "bearhunter":
-            winner = "Computer";
-            break;
-        case "ninjabear":
-            winner = "Computer";
-            break;
-        default:
-            winner = "Error - invalid choices";
-    }
-
-    //display the result
-    alert(`Winner: ${winner}`);
-    console.log(`Winner: ${winner}`);
-    
-    //ask if player wants to play again
-    let response = prompt("Do you want to play again? (yes/no): ");
-    if (response === null || response.toLowerCase() !== "yes") {
-        playAgain = false;
-        alert(`Thanks for playing, ${uname}!`);
-        console.log(`Game ended. Thanks for playing, ${uname}!`);
-    }
+  function compareChoices(playerChoice) {
+    const computerChoice = getComputerChoice();
+    const result = getWinner(playerChoice, computerChoice);
+    alert(`You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`);
   }
+   
+
+   
+
+  
 </script>
 </body>
 </html>
