@@ -45,10 +45,35 @@
 <p>Click a button to select your choice.</p>
 <br>
 <hr>
-buttons
+<button id="BearBtn">Bear</button>
+<button id="NinjaBtn">Ninja</button>
+<button id="HunterBtn">Hunter</button>
 <hr>
  
 <script>
+function getWinner(player, computer) {
+	if (
+	(player === "Bear" && computer === "Ninja") ||
+	(player === "Ninja" && computer === "Hunter") ||
+	(player === "Hunter" && computer === "Bear"))
+	{
+	return "You win!";
+	}
+
+	if (
+	(player === "Bear" && computer === "Hunter") ||
+	(player === "Ninja" && computer === "Bear") ||
+	((player === "Hunter" && computer === "Ninja"))
+	{
+	return "The computer wins!"
+   }
+}
+  
+function getComputerChoice() {
+    const choices = ["Rock", "Paper", "Scissors"];
+    const randomIndex = Math.floor(Math.random() * choices.length);
+    return choices[randomIndex];
+  }  
   //Get name from user
  // let uname = prompt('Welcome to Bear, Hunter, Ninja. Please enter your name: ');
 
