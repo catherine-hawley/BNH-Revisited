@@ -56,29 +56,45 @@
 	<!-- result will be displayed here -->
 </div>
 <script>
+
+const BearBtn = document.getElementbyId("Bear");
+const NinjaBtn = document.getElementbyId("Ninja");
+const HunterBtn = document.getElementbyId("Hunter");
+const resultDisplay = document.getElementbyId("result")	
+
+BearBtn.addEventListener("click", () {
+	playRound("Bear"));
+Ninja.addEventListener("click", () {
+	playRound("Ninja"));	
+HunterBtn.addEventListener("click", () {
+	playRound("Hunter"));	
+
+//Process player choice and randomly generate computer choice
+function playRound (playerChoice) {
+	const choices = ["Bear", "Ninja", "Hunter"];
+	const computerChoice = choices.[Math.floor (Math.random () * choices.lenth)];
+	
 function getWinner(player, computer) {
 	if (
 	(player === "Bear" && computer === "Ninja") ||
 	(player === "Ninja" && computer === "Hunter") ||
 	(player === "Hunter" && computer === "Bear"))
 	{
-	return "You win!";
+	result.Display.textContent = "You win!";
 	}
 
-	if (
+	else if (
 	(player === "Bear" && computer === "Hunter") ||
 	(player === "Ninja" && computer === "Bear") ||
 	((player === "Hunter" && computer === "Ninja"))
 	{
-	return "The computer wins!"
+	result.Display.textContent = "The computer wins!"
    }
+	else {
+		result.Display.texContent = "It's a tie!"
+	}
 }
-  
-function getComputerChoice() {
-    const choices = ["Rock", "Paper", "Scissors"];
-    const randomIndex = Math.floor(Math.random() * choices.length);
-    return choices[randomIndex];
-  }  
+	 
   
   function compareChoices(playerChoice) {
     const computerChoice = getComputerChoice();
