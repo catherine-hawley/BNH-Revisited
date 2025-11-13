@@ -80,16 +80,16 @@ function getWinner(player, computer) {
 	if (
 	(player === "Bear" && computer === "Ninja") ||
 	(player === "Ninja" && computer === "Hunter") ||
-	(player === "Hunter" && computer === "Bear"))
-	{
+	(player === "Hunter" && computer === "Bear")
+){
 	resultDisplay.textContent = "You win!";
 	}
 
 	else if (
 	(player === "Bear" && computer === "Hunter") ||
 	(player === "Ninja" && computer === "Bear") ||
-	((player === "Hunter" && computer === "Ninja"))
-	{
+	(player === "Hunter" && computer === "Ninja")
+){
 	resultDisplay.textContent = "The computer wins!"
    }
 	else {
