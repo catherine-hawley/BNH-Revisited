@@ -51,7 +51,7 @@
 <button id="HunterBtn">Hunter</button>
 </div>
 <hr>
-<div class = "result">
+<div id = "result">
 	<!-- result will be displayed here -->
 </div>
 <script>
@@ -64,7 +64,7 @@ const resultDisplay = document.getElementById("result")
 BearBtn.addEventListener("click", () {
 	playRound("Bear")
 });
-Ninja.addEventListener("click", () {
+NinjaBtn.addEventListener("click", () {
 	playRound("Ninja")
 });	
 HunterBtn.addEventListener("click", () {
@@ -74,7 +74,7 @@ HunterBtn.addEventListener("click", () {
 //Process player choice and randomly generate computer choice
 function playRound (playerChoice) {
 	const choices = ["Bear", "Ninja", "Hunter"];
-	const computerChoice = choices.[Math.floor (Math.random () * choices.length)];
+	const computerChoice = choices[Math.floor (Math.random () * choices.length)];
 	
 function getWinner(player, computer) {
 	if (
@@ -93,7 +93,7 @@ function getWinner(player, computer) {
 	resultDisplay.textContent = "The computer wins!"
    }
 	else {
-		result.Display.texContent = "It's a tie!"
+		resultDisplay.textContent = "It's a tie!"
 	}
 }
 	 
