@@ -62,16 +62,19 @@ const HunterBtn = document.getElementbyId("HunterBtn");
 const resultDisplay = document.getElementbyId("result")	
 
 BearBtn.addEventListener("click", () {
-	playRound("Bear"));
+	playRound("Bear")
+});
 Ninja.addEventListener("click", () {
-	playRound("Ninja"));	
+	playRound("Ninja")
+});	
 HunterBtn.addEventListener("click", () {
-	playRound("Hunter"));	
+	playRound("Hunter")
+});	
 
 //Process player choice and randomly generate computer choice
 function playRound (playerChoice) {
 	const choices = ["Bear", "Ninja", "Hunter"];
-	const computerChoice = choices.[Math.floor (Math.random () * choices.lenth)];
+	const computerChoice = choices.[Math.floor (Math.random () * choices.length)];
 	
 function getWinner(player, computer) {
 	if (
@@ -79,7 +82,7 @@ function getWinner(player, computer) {
 	(player === "Ninja" && computer === "Hunter") ||
 	(player === "Hunter" && computer === "Bear"))
 	{
-	result.Display.textContent = "You win!";
+	resultDisplay.textContent = "You win!";
 	}
 
 	else if (
@@ -87,7 +90,7 @@ function getWinner(player, computer) {
 	(player === "Ninja" && computer === "Bear") ||
 	((player === "Hunter" && computer === "Ninja"))
 	{
-	result.Display.textContent = "The computer wins!"
+	resultDisplay.textContent = "The computer wins!"
    }
 	else {
 		result.Display.texContent = "It's a tie!"
