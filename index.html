@@ -64,10 +64,10 @@ const resultDisplay = document.getElementById("result")
 BearBtn.addEventListener("click", ()=>{
 	playRound("Bear")
 });
-NinjaBtn.addEventListener("click", ()=> {
+NinjaBtn.addEventListener("click", ()=>{
 	playRound("Ninja")
 });	
-HunterBtn.addEventListener("click", () =>{
+HunterBtn.addEventListener("click", ()=>{
 	playRound("Hunter")
 });	
 
@@ -75,7 +75,8 @@ HunterBtn.addEventListener("click", () =>{
 function playRound (playerChoice) {
 	const choices = ["Bear", "Ninja", "Hunter"];
 	const computerChoice = choices[Math.floor (Math.random () * choices.length)];
-	
+  resultDisplay
+}
 function getWinner(player, computer) {
 	if (
 	(player === "Bear" && computer === "Ninja") ||
