@@ -1,5 +1,3 @@
-BNH Revisited 
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,33 +6,8 @@ BNH Revisited
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bear Ninja Hunter Game</title>
     <meta name="author" content="Catherine Hawley">
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        background-size: 100%;
-        color: white;
-        text-align: center;
-        padding: 50px;
-        /* min-height: 100vh; */
-        margin: 0;
-      }
-      
-      h2 {
-        font-size: 3em;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin-top: 100px;
-        animation: fadeIn 1s ease-in;
-      }
-      ul{
-        list-style-position: inside;
-        text-align: left;
-        display: inline-block;
-        margin: 0 auto 1em;
-        padding-left: 0;
-      }
-    
-    </style>
+   <link rel="stylesheet" type="text/css" href="style.css">
+        
   </head>
 
 <body>

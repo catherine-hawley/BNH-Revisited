@@ -1,0 +1,72 @@
+
+  body {
+    font-family: Helvetica, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+  }
+
+  ul {
+    list-style-position: inside;
+    text-align: left;
+    display: inline-block;
+    margin: 0 auto 1em;
+    padding-left: 0;
+  }
+
+  /* Button styling */
+  button {
+    background: linear-gradient(135deg, #6a85ff 0%, #7f53ac 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 1.2em;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  button:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  /* Result display */
+  .result {
+    background: rgba(255, 255, 255, 0.15);
+    font-size: x-large;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+  }
+
+  /* Win counter display */
+  .win-counter {
+    margin: 20px auto;
+    max-width: 300px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 1.3em;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+
