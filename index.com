@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Bear Ninja Hunter Game</title>
     <meta name="author" content="Catherine Hawley">
-   <link rel="stylesheet" href="css/style.css">
+   <!-- <link rel="stylesheet" href="css/style.css"> -->
      
   </head>
 
@@ -45,7 +45,7 @@
 <!-- Play Again button -->
 <button id="playAgainBtn" style="display:none; margin-top:20px;">Play Again</button>
 
- <script src="js/script.js"></script> 
+ <!-- <script src="js/script.js"></script> -->
 
 </body>
 </html>
