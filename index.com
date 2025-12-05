@@ -45,7 +45,7 @@
 <!-- Play Again button -->
 <button id="playAgainBtn" style="display:none; margin-top:20px;">Play Again</button>
 
- <!-- <script src="js/script.js"></script> -->
+ <script src="js/script.js"></script>
 
 </body>
 </html>
